@@ -28,7 +28,7 @@ I was struggling with my classes at university, and int elligence; supplemented 
 
 Portrait: <https://www.pexels.com/photo/adult-attractive-beautiful-cute-371160/>
 
-Harry Riley, *Front End Developer*
+Harry Riley, *Front End Developer*  
 Absolutely brilliant! So easy to use, and I love that I can learn on the go!
 
 Portrait: <https://www.pexels.com/photo/man-young-happy-smiling-91227/>
