@@ -1,18 +1,50 @@
 * {
   box-sizing: border-box;
   font-family: -apple-system, BlinkMacSystemFont, 'HelveticaNeue', sans-serif;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
 }
-
-body {
-
+header {
+  width: 100%;
+  position: fixed;
+}
+nav {
+  width: 720px;
+  height: 60px;
+  margin: 0 auto;
+}
+nav, nav > a, nav > ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav a {
+    color: white;
+}
+nav img, nav li:first-child {
+  margin-right: 16px;
 }
 
 section {
   width: 100%;
-  background-color: #FFFFFF;
+  background-color: #FBFBFB;
+
+  /* vh/vw values take the current size of the window % refers to the size of the parent element which in this case is the whole document */
   height: 100vh;
 }
+.btn {
+  width: 250px;
+  line-height: 40px;
+  height: 40px;
 
+  background: white;
+  border-radius: 4px;
+}
+.btn .green{
+  background: green;
+}
 .navbar {
    background-color: transparent;
    background: transparent;
@@ -20,13 +52,23 @@ section {
 }
 
 .header {
-  background-image: url("../assets/desktopBkg.png");
+  background-image: url("../assets/home-bg.png");
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
+
   display: block;
   margin-left: auto;
-  margin-right: auto
+  margin-right: auto;
+}
+#headContainer {
+  width: 720px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 h1 {
@@ -44,3 +86,6 @@ h3 {
 p {
     font-size: 14px;
 }
+
+
+/* MEDIA QUERIES FOR RESPONSIVE DESIGN */
