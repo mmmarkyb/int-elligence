@@ -148,7 +148,6 @@ section {
   box-shadow: -5px 63px 71px -88px rgba(0,0,0,0.25);
   padding: 16px;
 }
-
 #features > div:first-child img {
   width: 100px;
   display: block;
@@ -167,7 +166,6 @@ section {
   font-weight: 600;
   background: #69B558;
 }
-
 #features li {
   margin-bottom: 16px;
 }
@@ -182,17 +180,40 @@ section {
   margin-right: 0;
 }
 
+#story iframe {
+  display: block;
+  margin: 0 auto;
+  width: 60%;
+  height: 250px;
+}
+
 #team .btn {
   margin: 0 auto;
   color: white;
   background: #69B558;
 }
-
 #login {
   background: #69B558;
   margin: auto;
 }
 
+#team ul{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+#team li{
+  width: calc(33% - 16px);
+}
+#team li > img{
+  display: block;
+  margin: 0 auto;
+  width: calc(100% - 32px);
+}
+ #team li  > p {
+   text-align: center;
+}
 
 footer{
   background: #3c3c3c;
@@ -257,7 +278,7 @@ footer > div p {
 
 /* MEDIA QUERIES FOR RESPONSIVE DESIGN */
 @media only screen and (max-width: 768px) {
-  nav, #headContainer, #headContainer > p{
+  nav, #headContainer, #headContainer > p, #story, #team{
     width: calc(100% - 32px);
   }
   #headContainer > a{
@@ -277,11 +298,28 @@ footer > div p {
     margin: 0 0 16px 0;
 
   }
-  footer > section, footer > div p, footer > section > div, footer > section > div:last-child {
+  footer > section, footer > div p, footer > section > div, footer > section > div:last-child  {
     display: block;
     width: calc(100% - 32px);
   }
   footer > section > div {
     margin-bottom: 32px;
+  }
+
+  #story iframe {
+    width: 100%;
+  }
+  #team ul{
+    width: calc(100% - 32px);
+    display: block;
+    margin: 0 auto;
+  }
+  #team li{
+    width: 100%;
+    margin: 0 auto 32px auto;
+  }
+  #team li > p{
+    font-size: 24px;
+    margin: 16px;
   }
 }
