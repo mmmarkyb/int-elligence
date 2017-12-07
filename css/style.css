@@ -6,6 +6,24 @@
   text-decoration: none;
   list-style: none;
 }
+body{
+  background-color: #FAFAFA;
+}
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 18px
+}
+
+p {
+  font-size: 14px;
+}
 header {
   width: 100%;
   position: fixed;
@@ -28,40 +46,36 @@ nav img, nav li:first-child {
 }
 
 section {
-  width: 100%;
-  background-color: #FBFBFB;
-
-  /* vh/vw values take the current size of the window % refers to the size of the parent element which in this case is the whole document */
-  height: 100vh;
+  width: 720px;
+  margin: 64px auto;
 }
+
 .btn {
+  display: block;
   width: 250px;
   line-height: 40px;
+  text-align: center;
+  font-size: 20px;
   height: 40px;
 
   background: white;
-  border-radius: 4px;
-}
-.btn .green{
-  background: green;
-}
-.navbar {
-   background-color: transparent;
-   background: transparent;
-   border-color: transparent;
+  border-radius: 8px;
+  box-shadow: -5px 63px 71px -88px rgba(0,0,0,1);
 }
 
 .header {
-  background-image: url("../assets/home-bg.png");
+  width: 100%;
+  height: 100vh;
+
+  background: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ), url("../assets/home-bg.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
-
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0;
 }
+
 #headContainer {
   width: 720px;
   display: block;
@@ -70,22 +84,161 @@ section {
   top: 50%;
   transform: translateY(-50%);
 }
-
-h1 {
-    font-size: 36px;
+#headContainer p, #headContainer h1{
+  color: white;
+}
+#headContainer > p {
+  width: 450px;
+  margin: 24px 0;
+}
+#headContainer > a{
+  float: left;
+  width: calc(50% - 16px);
+  margin-right: 32px;
+  color: #3c3c3c;
+  font-weight: 600;
+}
+#headContainer > a:last-child{
+  margin-right: 0;
+  color: #69B558;
 }
 
-h2 {
-    font-size: 24px;
+#features {
+  display: flex;
+}
+#features > div{
+  width: calc(50% - 16px);
+  margin-right: 16px;
+}
+#features > div:first-child, #features li {
+  background: white;
+  border-radius: 6px;
+  box-shadow: -5px 63px 71px -88px rgba(0,0,0,0.25);
+  padding: 16px;
 }
 
-h3 {
-  font-size: 18px
+#features > div:first-child img {
+  width: 100px;
+  display: block;
+  margin: 16px auto;
+}
+#features > div:first-child h2 {
+  margin: 24px;
+  text-align: center;
+}
+#features > div:first-child p {
+  margin: 16px 0;
+}
+#features .btn {
+  margin: 0 auto;
+  color: white;
+  font-weight: 600;
+  background: #69B558;
 }
 
-p {
-    font-size: 14px;
+#features li {
+  margin-bottom: 16px;
+}
+#features li img {
+  width: 24px;
+  height: 24px;
+}
+#features li:last-child{
+  margin: 0
+}
+#features > div:last-child{
+  margin-right: 0;
+
 }
 
+footer{
+  background: #3c3c3c;
+}
+footer > section {
+  width: 720px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding-top: 24px;
+}
+footer > section > div {
+  width: calc(30% - 16px);
+}
+
+footer > section > div > h3 {
+  color: white;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+footer > section > div > a{
+  display: block;
+  margin: 16px 0;
+  font-size: 14px;
+  font-weight: 300;
+  color: #69B558;
+}
+
+footer > section > div:last-child {
+  width: calc(40% - 8px);
+}
+
+footer > section > div:last-child > div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+footer > section > div:last-child > div p {
+  margin-left: 8px;
+  color: white;
+}
+footer > section > div:last-child > p {
+  color: white;
+  font-weight: 200;
+  font-size: 12px;
+}
+
+footer > div {
+  width: 100%;
+  height: 20px;
+  background: #222;
+  margin-top: 16px;
+}
+footer > div p {
+  width: 720px;
+  margin: 0 auto;
+  color: rgba(255,255,255,0.5);
+  font-size: 10px;
+  line-height: 20px;
+}
 
 /* MEDIA QUERIES FOR RESPONSIVE DESIGN */
+@media only screen and (max-width: 768px) {
+  nav, #headContainer, #headContainer > p{
+    width: calc(100% - 32px);
+  }
+  #headContainer > a{
+    float: none;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    margin: 0 0 16px 0;
+  }
+  #features {
+    display: block;
+    width: calc(100% - 32px);
+    margin-top: 32px;
+  }
+  #features > div {
+    width: 100%;
+    margin: 0 0 16px 0;
+
+  }
+  footer > section, footer > div p, footer > section > div, footer > section > div:last-child {
+    display: block;
+    width: calc(100% - 32px);
+  }
+  footer > section > div {
+    margin-bottom: 32px;
+  }
+}
