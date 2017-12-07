@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <link rel="stylesheet" href="css/style.css">
     <!--<scriat src="functions.js"></scriat>!-->
@@ -8,7 +8,7 @@
   </head>
 <body>
   <!-- HEADER -->
-  <header>
+  <header id="header">
     <nav>
       <a class="" href="#">
         <img src="assets/logo.png" height="30" alt="int elligence">
@@ -70,8 +70,44 @@
      </div>
   </section>
 
-  <section class="testimonials">
-    stuff
+  <section id="testimonials">
+    <div id="testimonialWrapper">
+      <h2>What others think about us</h2>
+      <ul id="testimonalContent">
+        <li id="1">
+          <p><span>"</span>I was struggling with my classes at university, and int elligence; supplemented my lectures and tutorials so that I could keep up. The instructors were fantastic and really helped me understand what was going on.<span>"</span></p>
+          <div>
+            <h2>Amy Sampson</h2>
+            <p>Student at Queen Mary University of London</p>
+          </div>
+        </li>
+        <li style="display: none;" id="2">
+          <p><span>"</span>I'd been thinking about changing careers from accounting to tech for many years, and never thought I'd  be good enough to get hired at a unicorn. int elligence; gave me the resources I needed to make that switch, and best of all, I didn't have to pay a cent!<span>"</span></p>
+          <div>
+            <h2>Dudley Diddlestomp</h2>
+            <p>Software Enginneer</p>
+          </div>
+        </li>
+        <li style="display: none;" id="3">
+          <p><span>"</span>Absolutely brilliant! So easy to use, and I love that I can learn on the go!<span>"</span></p>
+          <div>
+            <h2>Harry Riley</h2>
+            <p>Front End Developer</p>
+          </div>
+        </li>
+      </ul>
+      <figure>
+        <div id="icon1" style="transform: scale(1); opacity: 1;" onclick="showTestimonial(1)">
+          <img src="assets/testimonials/amy.jpeg" alt="Amy">
+        </div>
+        <div id="icon2" onclick="showTestimonial(2)">
+          <img src="assets/testimonials/dudley.jpeg" alt="Dudley">
+        </div>
+        <div id="icon3" onclick="showTestimonial(3)">
+          <img src="assets/testimonials/harry.jpeg" alt="Harry">
+        </div>
+      </figure>
+    </div>
   </section>
 
 
@@ -111,6 +147,36 @@
   </section>
     <div><p>&copy; int elligence; online 2017.</p></div>
   </footer>
+  <script type="text/javascript">
+
+  var currentY;
+  var headerNav;
+
+  function showTestimonial(item){
+    if(item !== " "){
+      for(var i = 1; i <= 3; i++){
+        document.getElementById(i).style.display = "none";
+        document.getElementById("icon"+i).style.transform = "scale(0.8)";
+        document.getElementById("icon"+i).style.opacity = 0.5;
+      }
+      document.getElementById(item).style.display = "block";
+      document.getElementById("icon"+item).style.transform = "scale(1)";
+      document.getElementById("icon"+item).style.opacity = 1;
+    }
+  }
+
+  function yScroll(){
+
+    currentY = window.pageYOffset;
+    headerNav = document.getElementById('header');
+
+    headerNav.style.background = 'rgba(32,32,32,'+(0+(currentY/200))+')';
+  }
+
+  window.addEventListener ("scroll", yScroll);
+
+
+  </script>
 </body>
 
 </html>

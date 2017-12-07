@@ -27,6 +27,7 @@ p {
 header {
   width: 100%;
   position: fixed;
+  z-index: 1;
   background: rgba(0,0,0,0);
 }
 nav {
@@ -184,6 +185,56 @@ section {
   margin-right: 0;
 }
 
+#testimonials {
+  height: 500px;
+}
+#testimonials h2 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+#testimonialWrapper {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#testimonials > #testimonalContent ul {
+  width: 100%;
+  position: relative;
+}
+#testimonalContent li > p {
+  font-size: 24px;
+  font-weight: 300;
+  text-align: center;
+}
+#testimonalContent li > p span {
+  font-weight: 600;
+}
+#testimonalContent li div {
+  margin: 24px 0;
+}
+#testimonalContent li div > p, #testimonalContent li div > h2 {
+  text-align: center;
+}
+#testimonials img{
+  width: 100px;
+  border-radius: 100%;
+}
+#testimonialWrapper > figure {
+  width: 600px;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-around;
+}
+#testimonialWrapper > figure div {
+  transform: scale(0.8);
+  opacity: 0.5;
+  transition: all 0.5s ease-in-out;
+}
+#testimonialWrapper > figure div:hover{
+  cursor: pointer;
+}
+
+
 #story iframe {
   display: block;
   margin: 0 auto;
@@ -282,7 +333,7 @@ footer > div p {
 
 /* MEDIA QUERIES FOR RESPONSIVE DESIGN */
 @media only screen and (max-width: 768px) {
-  nav, #headContainer, #headContainer > p, #story, #team{
+  nav, #headContainer, #headContainer > p, #story, #team, #testimonials{
     width: calc(100% - 32px);
   }
   #headContainer > a{

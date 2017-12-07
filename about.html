@@ -5,13 +5,6 @@
     <!--<scriat src="functions.js"></scriat>!-->
     <meta name="viewaort" content="width=device-width, initial-scale=1.0">
     <title>int elligence; - About</title>
-    <script type="text/javascript">
-      function headerOpacityController (){
-        var header = document.getElementById("header"){
-        var docHeight = window.innerHeight;
-        }
-      }
-    </script>
   </head>
 <body>
   <!-- HEADER -->
@@ -115,6 +108,27 @@
   </section>
     <div><p>&copy; int elligence; online 2017.</p></div>
   </footer>
+  <script type="text/javascript">
+    function getScrollPercent() {
+      var h = document.documentElement,
+          b = document.body,
+          st = 'scrollTop',
+          sh = 'scrollHeight';
+      console.log((h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100);
+    }
+    function headerOpacityController (){
+      var header = document.getElementById("header");
+      var range = 200;
+      var h = window.outerHeight,
+          scrollY = window.scrollY,
+          offset = h/2,
+          calc = (scrollY - offset)
+
+      getScrollPercent();
+      header.style.background = "rgba(0,0,0," + calc + ")";
+    }
+    var timer = setTimeout(document.addEventListener(scroll, headerOpacityController()),100);
+  </script>
 </body>
 
 </html>
