@@ -167,6 +167,9 @@ section {
   font-weight: 600;
   background: #69B558;
 }
+#features .btn:hover {
+  background: #3c3c3c;
+}
 #features li {
   margin-bottom: 16px;
 }
