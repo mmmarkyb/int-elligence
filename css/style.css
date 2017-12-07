@@ -27,6 +27,7 @@ p {
 header {
   width: 100%;
   position: fixed;
+  background: rgba(0,0,0,0);
 }
 nav {
   width: 720px;
@@ -315,7 +316,7 @@ footer > div p {
     margin: 0 auto;
   }
   #team li{
-    width: 100%;
+    width: 80%;
     margin: 0 auto 32px auto;
   }
   #team li > p{
