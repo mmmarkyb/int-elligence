@@ -16,3 +16,14 @@ if($('.navbar').length > 0){
         checkScroll();
     });
 }
+
+function showTestimonial(item){
+  if(item != " "){
+    for(var i = 1; i <= 3; i++){
+      document.getElementById(i).style.display = "none";
+    }
+    document.getElementById(item).style.display = "block";
+    document.getElementById("icon"+item).style.transform = "scale(1)";
+    document.getElementById("icon"+item).style.opacity: = 1;
+  }
+}
