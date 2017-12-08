@@ -24,6 +24,7 @@ h3 {
 p {
   font-size: 14px;
 }
+
 header {
   width: 100%;
   position: fixed;
@@ -59,6 +60,7 @@ section {
   width: 720px;
   margin: 64px auto;
 }
+
 
 .btn {
   display: block;
@@ -300,11 +302,20 @@ section {
   color: white;
   width: 100%;
 }
-#loginBtn:hover{
-  background: white;
-  color: #69B558;
+#loginBtn:hover {
+  background: #569549;
   cursor: hover;
 }
+#contactBtn {
+  background: #69B558;
+  color: white;
+}
+#contactBtn:hover {
+  background: #3c3c3c;
+  color: white;
+  cursor: hover;
+}
+
 
 #team ul{
   display: flex;
@@ -347,6 +358,9 @@ section {
   width: 200px;
   background: #69B558;
   color: white;
+}
+#courseHead .btn:hover {
+  background: #569549;
 }
 
 #stats {
@@ -442,11 +456,28 @@ section {
   margin: 9px;
 }
 
+#contactIntro {
+  margin-top: 80px;
+  margin-bottom: 12px;
+}
+#contactIntro h2 {
+  margin-top: 80px;
+}
+#contact {
+  margin: 48px auto;
+  margin-bottom: 64px;
+}
+
+
 #coursesIntro {
   margin-top: 80px;
 }
 #coursesIntro h2 {
   margin-bottom: 24px;
+}
+#courses a {
+  text-decoration: none;
+  color: black;
 }
 #courses > div {
   margin-top: 32px;
@@ -485,9 +516,13 @@ section {
   display: block;
   margin: 24px auto;
   height: 40px;
-  line-height: 40px;
+  /*line-height: 40px;*/
   background: #69B558;
   color: white;
+}
+#courses .btn:hover {
+  color: white;
+  background: #569549;
 }
 
 footer{

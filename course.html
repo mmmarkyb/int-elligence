@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>int elligence; - Introduction to C++</title>
@@ -18,7 +19,7 @@
           <a class="" href="courseLib.html" title="course">Courses</a>
         </li>
         <li>
-          <a class="" href="login.html" title="login">Login</a>
+          <a class="" data-toggle="modal" href="#login" title="login">Login</a>
         </li>
       </ul>
     </nav>
@@ -27,7 +28,7 @@
     <div>
       <h2>Introduction to C++</h2>
       <p>Beginner, 15 Hours</p>
-      <a class="btn" href="#" title="enroll">Enroll</a>
+      <a class="btn btn-sm" href="#" title="enroll">Enroll</a>
     </div>
   </section>
   <section id="stats">
@@ -125,24 +126,62 @@
     </ul>
     <div onclick="toggleSyllabus()"><div></div><p id="readMore">Read More</p><div></div></div>
   </section>
+
+  <!-- LOGIN MODAL -->
+  <div id="login" class="modal fade" role="dialog">
+    <button type="button" class="close" data-dismiss="modal"> &times;</button>
+    <div class="modal-dialog">
+      <img src="assets/logo.svg" alt="logo" /><br />
+      <div class="modal-content">
+        <div class="modal-body">
+
+          <h2>Welcome back!</h2><br />
+          <form>
+            <div class="form-group">
+              <label class="sr-only" for="email">Email</label>
+              <input type="text" class="form-control input-sm" placeholder="Email" id="email" name="email">
+            </div>
+            <div class="form-group">
+              <label class="sr-only" for="password">Password</label>
+              <input type="password" class="form-control input-sm" placeholder="Password" id="password" name="password"></div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox"> Remember me
+              </label>
+            </div>
+            <div class="form-group">
+              <a class="btn btn-sm" id="loginBtn" href="courses.html">Sign in</a>
+            </div>
+
+          </form><br />
+          <p>Forgot your password? <a href="#0">Reset Password.</a></p>
+        </div>
+
+      </div><br />
+      <p>Need a free account? <a href="#0">Create a free account.</a></p>
+    </div>
+  </div>
+
+
+  <!-- FOOTER -->
   <footer>
     <section>
       <div>
         <h3>Learn With Us</h3>
-        <a href="#" title="C language">C</a>
-        <a href="#" title="C++">C++</a>
-        <a href="#" title="Python">Python</a>
-        <a href="#" title="Java">Java</a>
-        <a href="#" title="HTML/CSS">HTML &amp; CSS</a>
-        <a href="#" title="Swift">Swift</a>
+        <a href="course.html" title="C language">C</a>
+        <a href="course.html" title="C++">C++</a>
+        <a href="course.html" title="Python">Python</a>
+        <a href="course.html" title="Java">Java</a>
+        <a href="course.html" title="HTML/CSS">HTML &amp; CSS</a>
+        <a href="course.html" title="Swift">Swift</a>
       </div>
       <div>
         <h3>About</h3>
-        <a href="#" title="What We Do">What We Do</a>
-        <a href="#" title="Why Learn With Us">Why Learn With Us</a>
-        <a href="#" title="Stories">Stories</a>
-        <a href="#" title="Jobs">Jobs</a>
-        <a href="#" title="Privicy">Privicy Policy</a>
+        <a href="about.html" title="Our Story">Our Story</a>
+        <a href="contact.html" title="Contact">Contact Us</a>
+        <a href="#" title="FAQ">FAQ</a>
+        <a href="#" title="Careers">Careers</a>
+        <a href="#" title="Privacy">Privacy Policy</a>
         <a href="#" title="Terms &amp; Conditions">Terms of Use</a>
       </div>
       <div>
@@ -155,7 +194,7 @@
           <br><br>
           Mauris temaor susciait erat at fringilla. Aliquam malesuada iaculis massa quis eleifend.
         </p>
-        <a href="#" title="read more about">Read More</a>
+        <a href="about.html" title="read more about">Read More</a>
       </div>
   </section>
     <div><p>&copy; int elligence; online 2017.</p></div>
@@ -173,5 +212,10 @@
       }
     }
   </script>
+  <!-- Bootstrap JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
 </body>
 </html>
