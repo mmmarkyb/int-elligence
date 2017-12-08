@@ -297,16 +297,13 @@ section {
 }
 #loginBtn {
   background: #69B558;
-  border: #69B558;
   color: white;
   width: 100%;
 }
 #loginBtn:hover{
   background: white;
   color: #69B558;
-  border-style: solid;
-  border-width: 1px;
-  border-color:#69B558;
+  cursor: hover;
 }
 
 #team ul{
@@ -445,6 +442,53 @@ section {
   margin: 9px;
 }
 
+#coursesIntro {
+  margin-top: 80px;
+}
+#coursesIntro h2 {
+  margin-bottom: 24px;
+}
+#courses > div {
+  margin-top: 32px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#courses > div a {
+  width: calc(50% - 16px);
+  background: white;
+  margin-bottom: 24px;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: -5px 43px 31px -50px rgba(0, 0, 0, 0.25);
+  transition: all 0.125s ease-in-out;
+}
+#courses > div a:visited {
+  color: black;
+}
+#courses > div a:hover {
+  transform: scale(1.05);
+}
+#courses img {
+  width: 100%;
+  margin-bottom: 16px;
+}
+#courses a > p, #courses a > h3 {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+#courses a > h3 + p {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.75)
+}
+#courses > a {
+  display: block;
+  margin: 24px auto;
+  height: 40px;
+  line-height: 40px;
+  background: #69B558;
+  color: white;
+}
 
 footer{
   background: #3c3c3c;
@@ -516,7 +560,7 @@ footer > div p {
 
 /* MEDIA QUERIES FOR RESPONSIVE DESIGN */
 @media only screen and (max-width: 768px) {
-  nav, #headContainer, #headContainer > p, #story, #team, #testimonials, #stats, #descrip-lec, #syllabus {
+  nav, #headContainer, #headContainer > p, #story, #team, #testimonials, #stats, #descrip-lec, #syllabus, #coursesIntro, #courses {
     width: calc(100% - 32px);
   }
   #headContainer > a{
@@ -544,7 +588,7 @@ footer > div p {
     margin-bottom: 32px;
   }
 
-  #story iframe, #courseHead  {
+  #story iframe, #courseHead, #courses > div a  {
     width: 100%;
   }
   #team ul{
