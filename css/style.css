@@ -311,7 +311,7 @@ section {
   color: white;
 }
 #contactBtn:hover {
-  background: #3c3c3c;
+  background: #569549;
   color: white;
   cursor: hover;
 }
@@ -354,7 +354,6 @@ section {
   margin-bottom: 8px;
 }
 #courseHead .btn {
-  border-radius: 0;
   width: 200px;
   background: #69B558;
   color: white;
@@ -392,6 +391,9 @@ section {
 #descrip-lec > div {
   width: calc(50% - 16px);
 }
+#descrip-lec > div p {
+  margin-bottom: 0;
+}
 #descrip-lec > div:last-child {
   background: white;
   border-radius: 6px;
@@ -404,7 +406,6 @@ section {
   border-radius: 100%;
 }
 #descrip-lec > div:last-child p {
-  margin-left: 16px;
   font-size: 12px;
   margin: 16px 0 16px 16px;
 }
@@ -522,7 +523,7 @@ section {
 }
 #courses .btn:hover {
   color: white;
-  background: #569549;
+  background: #3C3C3C;
 }
 
 footer{
@@ -594,15 +595,17 @@ footer > div p {
 }
 
 /* MEDIA QUERIES FOR RESPONSIVE DESIGN */
+/* Would normally include another media query for a tablet sized breakpoint but there is no real
+case where the design breaks beyond use so this is not essential at this stage */
 @media only screen and (max-width: 768px) {
-  nav, #headContainer, #headContainer > p, #story, #team, #testimonials, #stats, #descrip-lec, #syllabus, #coursesIntro, #courses {
+  nav, #headContainer, #headContainer > p, #story, #team, #testimonials, #stats, #descrip-lec, #syllabus, #coursesIntro, #courses, #contact, #contactIntro {
     width: calc(100% - 32px);
   }
   #headContainer > a{
     float: none;
     width: 100%;
     height: 60px;
-    line-height: 60px;
+    line-height: 52px;
     margin: 0 0 16px 0;
   }
   #features {
@@ -623,7 +626,7 @@ footer > div p {
     margin-bottom: 32px;
   }
 
-  #story iframe, #courseHead, #courses > div a  {
+  #story iframe, #courseHead, #courses > div a, #contactBtn  {
     width: 100%;
   }
   #team ul{
@@ -646,7 +649,7 @@ footer > div p {
   #stats li{
     width: auto;
   }
-  #descrip-lec{
+  #descrip-lec, .form-inline{
     display: block;
   }
   #descrip-lec > div, #syllabus ul > li {
