@@ -27,3 +27,9 @@ function showTestimonial(item){
     document.getElementById("icon"+item).style.opacity: = 1;
   }
 }
+
+$("#headContainer").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#features").offset().top
+    }, 2000);
+});
