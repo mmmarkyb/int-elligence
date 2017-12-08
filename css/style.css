@@ -27,6 +27,7 @@ p {
 header {
   width: 100%;
   position: fixed;
+  top:0;
   z-index: 1;
   background: rgba(0,0,0,0);
 }
@@ -270,6 +271,123 @@ section {
    text-align: center;
 }
 
+#courseHead {
+  background: linear-gradient( rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75) ), url(../assets/course-bg.jpeg);
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  margin: 60px auto 0 auto;
+  position: relative;
+}
+#courseHead div {
+  margin: 0 24px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#courseHead h2, #courseHead p {
+  color: white;
+  margin-bottom: 8px;
+}
+#courseHead .btn {
+  border-radius: 0;
+  width: 200px;
+  background: #69B558;
+  color: white;
+}
+
+#stats {
+  background: white;
+  margin-top: 40px;
+  border-radius: 6px;
+  box-shadow: -5px 43px 31px -50px rgba(0, 0, 0, 0.25);
+}
+#stats ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 24px;
+}
+#stats li{
+  width: 80px;
+}
+#stats li > img {
+  display: block;
+  margin: 0 auto;
+}
+#stats li > p {
+  text-align: center;
+}
+
+#descrip-lec {
+  display: flex;
+  justify-content: space-between;
+}
+#descrip-lec > div {
+  width: calc(50% - 16px);
+}
+#descrip-lec > div:last-child {
+  background: white;
+  border-radius: 6px;
+  box-shadow: -5px 43px 31px -50px rgba(0, 0, 0, 0.25);
+  display: flex;
+  padding: 16px;
+}
+#descrip-lec > div:last-child img {
+  height: 80px;
+  border-radius: 100%;
+}
+#descrip-lec > div:last-child p {
+  margin-left: 16px;
+  font-size: 12px;
+  margin: 16px 0 16px 16px;
+}
+#descrip-lec > div:last-child span {
+  color: #6c6c6c;
+  font-size: 10px;
+  margin-top: 8px;
+}
+#syllabus ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+#syllabus ul > li {
+  width: calc(50% - 16px);
+  margin: 24px 0;
+}
+#syllabus ul > li h3 {
+  font-weight: 500;
+}
+#syllabus ul > li h3::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 2px;
+  background: #69B558;
+  margin-bottom: 16px;
+}
+#syllabus > div:last-child {
+  width: 300px;
+  display: flex;
+  margin: 0 auto;
+}
+#syllabus > div:last-child:hover, #syllabus > div:last-child:hover p {
+  color: #3c3c3c;
+  cursor: pointer;
+}
+#syllabus > div:last-child p {
+  width: 100px;
+  color: #69B558;
+  text-align: center;
+}
+#syllabus > div:last-child div {
+  width: 100px;
+  height: 1px;
+  background: black;
+  margin: 9px;
+}
 footer{
   background: #3c3c3c;
 }
@@ -333,7 +451,7 @@ footer > div p {
 
 /* MEDIA QUERIES FOR RESPONSIVE DESIGN */
 @media only screen and (max-width: 768px) {
-  nav, #headContainer, #headContainer > p, #story, #team, #testimonials{
+  nav, #headContainer, #headContainer > p, #story, #team, #testimonials, #stats, #descrip-lec, #syllabus {
     width: calc(100% - 32px);
   }
   #headContainer > a{
@@ -348,7 +466,7 @@ footer > div p {
     width: calc(100% - 32px);
     margin-top: 32px;
   }
-  #features > div {
+  #features > div, #testimonialWrapper > figure {
     width: 100%;
     margin: 0 0 16px 0;
 
@@ -361,7 +479,7 @@ footer > div p {
     margin-bottom: 32px;
   }
 
-  #story iframe {
+  #story iframe, #courseHead  {
     width: 100%;
   }
   #team ul{
@@ -376,5 +494,25 @@ footer > div p {
   #team li > p{
     font-size: 24px;
     margin: 16px;
+  }
+  #stats ul {
+    padding: 24px 16px;
+    justify-content: space-between;
+  }
+  #stats li{
+    width: auto;
+  }
+  #descrip-lec{
+    display: block;
+  }
+  #descrip-lec > div, #syllabus ul > li {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  #syllabus ul {
+    height: 100% !important;
+  }
+  #syllabus div:last-child{
+    display: none;
   }
 }
