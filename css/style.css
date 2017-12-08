@@ -27,6 +27,7 @@ p {
 header {
   width: 100%;
   position: fixed;
+  top:0;
   z-index: 1;
   background: rgba(0,0,0,0);
 }
@@ -262,6 +263,9 @@ section {
   margin: 0 auto;
   color: white;
   background: #69B558;
+}
+#team .btn:hover{
+  background: #3c3c3c;
 }
 
 #login {
