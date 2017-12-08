@@ -1,0 +1,676 @@
+/* "*" - for all generic styles, used to reset browser defaults */
+* {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'HelveticaNeue', sans-serif;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+body{
+  background-color: #FAFAFA;
+}
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 18px
+}
+
+p {
+  font-size: 14px;
+}
+
+/* nav & header bar has fixed position to keep at attached to the top of the page
+   z-index property places it above the other elements*/
+header {
+  width: 100%;
+  position: fixed;
+  top:0;
+  z-index: 1;
+  background: rgba(0,0,0,0);
+}
+nav {
+  width: 720px;
+  height: 60px;
+  margin: 0 auto;
+}
+/* child combinator selector for all nav a and ul elements */
+nav, nav > a, nav > ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav a {
+    color: white;
+}
+nav a:hover {
+  text-decoration: none;
+  color: #b0b0b0;
+}
+nav img, nav li:first-child {
+  margin-right: 16px;
+}
+nav p, nav a, nav ol, nav dl, nav ul {
+  margin-bottom: 0;
+}
+
+section {
+  width: 720px;
+  margin: 64px auto;
+}
+
+/* btn styles for genreic button qualites  */
+
+.btn {
+  display: block;
+  width: 250px;
+  text-align: center;
+  font-size: 20px;
+
+  background: white;
+  border-radius: 8px;
+  box-shadow: -5px 63px 71px -88px rgba(0,0,0,1);
+}
+.green:hover {
+  background: #69B558;
+}
+.grey:hover {
+  background: #3c3c3c;
+}
+.close {
+  margin: 16px;
+  font-size: 32px;
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+
+  background: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ), url("../assets/home-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: block;
+  margin: 0;
+}
+
+.modal-dialog {
+  margin: 24px auto;
+  padding: 24px;
+}
+.modal-dialog p {
+  color: white;
+}
+.modal-content {
+  width:100%;
+  padding: 12px;
+  border: none;
+}
+.modal-content p {
+  color: black;
+}
+.modal-content h2 {
+  text-align: center;
+}
+
+.mission {
+  width: 100%;
+  height: 100vh;
+
+  background: linear-gradient( rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75) ), url("../assets/about-bg.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: block;
+  margin: 0;
+}
+.member {
+  width: 33%;
+}
+
+/* all index styles  */
+
+#headContainer {
+  width: 720px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#headContainer p, #headContainer h1{
+  color: white;
+}
+#headContainer > p {
+  width: 450px;
+  margin: 24px 0;
+}
+#headContainer > a{
+  float: left;
+  width: calc(50% - 16px);
+  margin-right: 32px;
+  color: #3c3c3c;
+  font-weight: 600;
+}
+#headContainer > a:hover{
+  color: white;
+  font-weight: 600;
+}
+
+#headContainer > a:last-child{
+  margin-right: 0;
+  color: #69B558;
+}
+#headContainer > a:last-child:hover{
+  color: white;
+}
+
+#features {
+  display: flex;
+}
+#features > div{
+  width: calc(50% - 16px);
+  margin-right: 16px;
+}
+#features > div:first-child, #features li {
+  background: white;
+  border-radius: 6px;
+  box-shadow: -5px 63px 71px -88px rgba(0,0,0,0.25);
+  padding: 16px;
+}
+#features > div:first-child img {
+  width: 100px;
+  display: block;
+  margin: 16px auto;
+}
+#features > div:first-child h2 {
+  margin: 24px;
+  text-align: center;
+}
+#features > div:first-child p {
+  margin: 16px 0;
+}
+#features .btn {
+  margin: 0 auto;
+  color: white;
+  font-weight: 600;
+  background: #69B558;
+}
+#features .btn:hover {
+  background: #3c3c3c;
+}
+#features li {
+  margin-bottom: 16px;
+}
+#features li img {
+  width: 24px;
+  height: 24px;
+}
+#features li:last-child{
+  margin: 0
+}
+#features > div:last-child{
+  margin-right: 0;
+}
+
+#testimonials {
+  height: 500px;
+}
+#testimonials h2 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+#testimonialWrapper {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#testimonials > #testimonalContent ul {
+  width: 100%;
+  position: relative;
+}
+#testimonalContent li > p {
+  font-size: 24px;
+  font-weight: 300;
+  text-align: center;
+}
+#testimonalContent li > p span {
+  font-weight: 600;
+}
+#testimonalContent li div {
+  margin: 24px 0;
+}
+#testimonalContent li div > p, #testimonalContent li div > h2 {
+  text-align: center;
+}
+#testimonials img{
+  width: 100px;
+  border-radius: 100%;
+}
+#testimonialWrapper > figure {
+  width: 600px;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-around;
+}
+#testimonialWrapper > figure div {
+  transform: scale(0.8);
+  opacity: 0.5;
+  transition: all 0.5s ease-in-out;
+}
+#testimonialWrapper > figure div:hover{
+  cursor: pointer;
+}
+
+/* all about styles  */
+
+#story iframe {
+  display: block;
+  margin: 0 auto;
+  width: 60%;
+  height: 250px;
+}
+
+#team .btn {
+  margin: 0 auto;
+  color: white;
+  background: #69B558;
+}
+#team .btn:hover{
+  background: #3c3c3c;
+}
+
+#login {
+  background: rgba(0,0,0,0.6);
+}
+#login section{
+  width: 100%;
+}
+#login img{
+  width: 150px;
+  display: block;
+  margin: auto;
+}
+#login p{
+  text-align: center;
+}
+#loginBtn {
+  background: #69B558;
+  color: white;
+  width: 100%;
+}
+#loginBtn:hover {
+  background: #569549;
+  cursor: hover;
+}
+#contactBtn {
+  background: #69B558;
+  color: white;
+}
+#contactBtn:hover {
+  background: #569549;
+  color: white;
+  cursor: hover;
+}
+
+#team ul{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+#team li{
+  width: calc(33% - 16px);
+}
+#team li > img{
+  display: block;
+  margin: 0 auto;
+  width: calc(100% - 32px);
+}
+ #team li  > p {
+   text-align: center;
+}
+
+/* all course styles  */
+
+#courseHead {
+  background: linear-gradient( rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75) ), url(../assets/course-bg.jpeg);
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  margin: 60px auto 0 auto;
+  position: relative;
+}
+#courseHead div {
+  margin: 0 24px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#courseHead h2, #courseHead p {
+  color: white;
+  margin-bottom: 8px;
+}
+#courseHead .btn {
+  width: 200px;
+  background: #69B558;
+  color: white;
+}
+#courseHead .btn:hover {
+  background: #569549;
+}
+
+#stats {
+  background: white;
+  margin-top: 40px;
+  border-radius: 6px;
+  box-shadow: -5px 43px 31px -50px rgba(0, 0, 0, 0.25);
+}
+#stats ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 24px;
+}
+#stats li{
+  width: 80px;
+}
+#stats li > img {
+  display: block;
+  margin: 0 auto;
+}
+#stats li > p {
+  text-align: center;
+}
+
+#descrip-lec {
+  display: flex;
+  justify-content: space-between;
+}
+#descrip-lec > div {
+  width: calc(50% - 16px);
+}
+#descrip-lec > div p {
+  margin-bottom: 0;
+}
+#descrip-lec > div:last-child {
+  background: white;
+  border-radius: 6px;
+  box-shadow: -5px 43px 31px -50px rgba(0, 0, 0, 0.25);
+  display: flex;
+  padding: 16px;
+}
+#descrip-lec > div:last-child img {
+  height: 80px;
+  border-radius: 100%;
+}
+#descrip-lec > div:last-child p {
+  font-size: 12px;
+  margin: 16px 0 16px 16px;
+}
+#descrip-lec > div:last-child span {
+  color: #6c6c6c;
+  font-size: 10px;
+  margin-top: 8px;
+}
+#syllabus ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+#syllabus ul > li {
+  width: calc(50% - 16px);
+  margin: 24px 0;
+}
+#syllabus ul > li h3 {
+  font-weight: 500;
+}
+#syllabus ul > li h3::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 2px;
+  background: #69B558;
+  margin-bottom: 16px;
+}
+#syllabus > div:last-child {
+  width: 300px;
+  display: flex;
+  margin: 0 auto;
+}
+#syllabus > div:last-child:hover, #syllabus > div:last-child:hover p {
+  color: #3c3c3c;
+  cursor: pointer;
+}
+#syllabus > div:last-child p {
+  width: 100px;
+  color: #69B558;
+  text-align: center;
+}
+#syllabus > div:last-child div {
+  width: 100px;
+  height: 1px;
+  background: black;
+  margin: 9px;
+}
+
+/* all contact styles  */
+
+#contactIntro {
+  margin-top: 80px;
+  margin-bottom: 12px;
+}
+#contactIntro h2 {
+  margin-top: 80px;
+}
+#contact {
+  margin: 48px auto;
+  margin-bottom: 64px;
+}
+
+/* all course styles */
+
+#coursesIntro {
+  margin-top: 80px;
+}
+#coursesIntro h2 {
+  margin-bottom: 24px;
+}
+#courses a {
+  text-decoration: none;
+  color: black;
+}
+#courses > div {
+  margin-top: 32px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#courses > div a {
+  width: calc(50% - 16px);
+  background: white;
+  margin-bottom: 24px;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: -5px 43px 31px -50px rgba(0, 0, 0, 0.25);
+  transition: all 0.125s ease-in-out;
+}
+#courses > div a:visited {
+  color: black;
+}
+#courses > div a:hover {
+  transform: scale(1.05);
+}
+#courses img {
+  width: 100%;
+  margin-bottom: 16px;
+}
+#courses a > p, #courses a > h3 {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+#courses a > h3 + p {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.75)
+}
+#courses > a {
+  display: block;
+  margin: 24px auto;
+  height: 40px;
+  background: #69B558;
+  color: white;
+}
+#courses .btn:hover {
+  color: white;
+  background: #3C3C3C;
+}
+#faq {
+  text-align: center;
+}
+
+footer{
+  background: #3c3c3c;
+}
+footer a:hover {
+  text-decoration: none;
+  color: #ADD6A3;
+}
+footer p, footer a {
+  margin-bottom: 0;
+}
+footer > section {
+  width: 720px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding-top: 24px;
+}
+footer > section > div {
+  width: calc(30% - 16px);
+}
+
+footer > section > div > h3 {
+  color: white;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+footer > section > div > a{
+  display: block;
+  margin: 16px 0;
+  font-size: 14px;
+  font-weight: 300;
+  color: #69B558;
+}
+
+footer > section > div:last-child {
+  width: calc(40% - 8px);
+}
+
+footer > section > div:last-child > div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+footer > section > div:last-child > div p {
+  margin-left: 8px;
+  color: white;
+}
+footer > section > div:last-child > p {
+  color: white;
+  font-weight: 200;
+  font-size: 12px;
+}
+
+footer > div {
+  width: 100%;
+  height: 20px;
+  background: #222;
+  margin-top: 16px;
+}
+footer > div p {
+  width: 720px;
+  margin: 0 auto;
+  color: rgba(255,255,255,0.5);
+  font-size: 10px;
+  line-height: 20px;
+}
+
+/* MEDIA QUERIES FOR RESPONSIVE DESIGN */
+/* Would normally include another media query for a tablet sized breakpoint but there is no real
+case where the design breaks beyond use so this is not essential at this stage */
+@media only screen and (max-width: 768px) {
+  nav, #headContainer, #headContainer > p, #story, #team, #testimonials, #stats, #descrip-lec, #syllabus, #coursesIntro, #courses, #contact, #contactIntro {
+    width: calc(100% - 32px);
+  }
+  #headContainer > a{
+    float: none;
+    width: 100%;
+    height: 60px;
+    line-height: 52px;
+    margin: 0 0 16px 0;
+  }
+  #features {
+    display: block;
+    width: calc(100% - 32px);
+    margin-top: 32px;
+  }
+  #features > div, #testimonialWrapper > figure {
+    width: 100%;
+    margin: 0 0 16px 0;
+
+  }
+  footer > section, footer > div p, footer > section > div, footer > section > div:last-child  {
+    display: block;
+    width: calc(100% - 32px);
+  }
+  footer > section > div {
+    margin-bottom: 32px;
+  }
+
+  #story iframe, #courseHead, #courses > div a, #contactBtn  {
+    width: 100%;
+  }
+  #team ul{
+    width: calc(100% - 32px);
+    display: block;
+    margin: 0 auto;
+  }
+  #team li{
+    width: 80%;
+    margin: 0 auto 32px auto;
+  }
+  #team li > p{
+    font-size: 24px;
+    margin: 16px;
+  }
+  #stats ul {
+    padding: 24px 16px;
+    justify-content: space-between;
+  }
+  #stats li{
+    width: auto;
+  }
+  #descrip-lec, .form-inline{
+    display: block;
+  }
+  #descrip-lec > div, #syllabus ul > li {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  #syllabus ul {
+    height: 100% !important;
+  }
+  #syllabus div:last-child{
+    display: none;
+  }
+}

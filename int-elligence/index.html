@@ -1,0 +1,227 @@
+<!-- we have used semantic elements and id tags to create self documenting code any comments throughout the code highlight key areas of intrest -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="int elligence; the free online learning resource for code, get started now.">
+    <meta name="author" content="int elligence;">
+    <title>int elligence;</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header id="header">
+      <nav>
+        <a href="#" title="Home">
+          <img src="assets/logo.png" height="30" alt="int elligence">
+          <p>int elligence;</p>
+        </a>
+        <ul>
+          <li>
+            <a class="" href="courseLib.html" title="course">Courses</a>
+          </li>
+          <li>
+            <a data-toggle="modal" href="#login" title="login">Login</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <section class="header">
+      <div id="headContainer">
+        <!-- Content here -->
+        <h1>Find a new you.</h1>
+        <p>
+          Ever wanted to learn how to program? Stop waiting and start learning today with our free courses in C, Java, python and many more!
+        </p>
+        <a class="btn grey btn-sm" href="#features" title="Start Now">Start Now</a>
+        <a class="btn green btn-sm" data-toggle="modal" data-target="#login" title="Login">Login</a>
+      </div>
+    </section>
+
+    <section id="features">
+       <div>
+         <img src="assets/icons/collabLearning.png" alt="Collabarative learning">
+         <h2>Collabarative Learning</h2>
+         <p>
+          Lorem ipsum dolor sit amet, consectetur adiaiscing elit. Donec ultricies dignissim efficitur. Quisque facilisis dolor a eros tincidunt bibendum. aellentesque vitae mauris non nibh aliquet fringilla vitae et enim.
+          <br><br>
+          Donec in bibendum nunc. aellentesque et mi dictum, congue magna a, lacinia ex. Sed in commodo ex, quis feugiat tellus. Mauris temaor susciait erat at fringilla. Aliquam malesuada iaculis massa quis eleifend. Sed convallis aellentesque blandit.
+        </p>
+         <a class="btn btn-sm" href="#testimonials" title="View">See more</a>
+       </div>
+       <div>
+         <ul>
+           <li>
+             <img src="assets/icons/selfPaced.png" alt="Self paced">
+             <h3>Self paced Learning</h3>
+             <p>Lorem iasum dolor sit amet, consectetur adiaiscing elit. Donec ultricies dignissim efficitur. Quisque facilisis dolor a eros tincidunt bibendum.</p>
+           </li>
+           <li>
+             <img src="assets/icons/wideRangeOfCourses.png" alt="rang of courses">
+             <h3>Extensive Library</h3>
+             <p>Lorem iasum dolor sit amet, consectetur adiaiscing elit. Donec ultricies dignissim efficitur. Quisque facilisis dolor a eros tincidunt bibendum.</p>
+           </li>
+           <li>
+             <img src="assets/icons/free.png" alt="free">
+             <h3>Forever Free</h3>
+             <p>Lorem ipsum dolor sit amet, consectetur adiaiscing elit. Donec ultricies dignissim efficitur. Quisque facilisis dolor a eros tincidunt bibendum.</p>
+           </li>
+         </ul>
+       </div>
+    </section>
+
+    <section id="testimonials">
+      <div id="testimonialWrapper">
+        <h2>What others think about us</h2>
+        <ul id="testimonalContent">
+          <li id="1">
+            <p><span>"</span>I was struggling with my classes at university, and int elligence; supplemented my lectures and tutorials so that I could keep up. The instructors were fantastic and really helped me understand what was going on.<span>"</span></p>
+            <div>
+              <h2>Amy Sampson</h2>
+              <p>Student at Queen Mary University of London</p>
+            </div>
+          </li>
+          <li style="display: none;" id="2">
+            <p><span>"</span>I'd been thinking about changing careers from accounting to tech for many years, and never thought I'd  be good enough to get hired at a unicorn. int elligence; gave me the resources I needed to make that switch, and best of all, I didn't have to pay a cent!<span>"</span></p>
+            <div>
+              <h2>Dudley Diddlestomp</h2>
+              <p>Software Enginneer</p>
+            </div>
+          </li>
+          <li style="display: none;" id="3">
+            <p><span>"</span>Absolutely brilliant! So easy to use, and I love that I can learn on the go!<span>"</span></p>
+            <div>
+              <h2>Harry Riley</h2>
+              <p>Front End Developer</p>
+            </div>
+          </li>
+        </ul>
+        <figure>
+          <div id="icon1" style="transform: scale(1); opacity: 1;" onclick="showTestimonial(1)">
+            <img src="assets/testimonials/amy.jpeg" alt="Amy">
+          </div>
+          <div id="icon2" onclick="showTestimonial(2)">
+            <img src="assets/testimonials/dudley.jpeg" alt="Dudley">
+          </div>
+          <div id="icon3" onclick="showTestimonial(3)">
+            <img src="assets/testimonials/harry.jpeg" alt="Harry">
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- LOGIN MODAL -->
+    <div id="login" class="modal fade" role="dialog">
+      <button type="button" class="close" data-dismiss="modal"> &times;</button>
+      <div class="modal-dialog">
+        <img src="assets/logo.svg" alt="logo" /><br />
+        <div class="modal-content">
+          <div class="modal-body">
+
+            <h2>Welcome back!</h2><br />
+            <form>
+              <div class="form-group">
+                <label class="sr-only" for="email">Email</label>
+                <input type="text" class="form-control input-sm" placeholder="Email" id="email" name="email">
+              </div>
+              <div class="form-group">
+                <label class="sr-only" for="password">Password</label>
+                <input type="password" class="form-control input-sm" placeholder="Password" id="password" name="password"></div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"> Remember me
+                </label>
+              </div>
+              <div class="form-group">
+                <a class="btn btn-sm" id="loginBtn" href="courses.html">Sign in</a>
+              </div>
+            </form><br />
+            <p>Forgot your password? <a href="#0" title="Reset Password">Reset Password.</a></p>
+
+          </div>
+        </div><br />
+        <p>Need a free account? <a href="#0" title="Create a free account">Create a free account.</a></p>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <section>
+        <div>
+          <h3>Learn With Us</h3>
+          <a href="course.html" title="C language">C</a>
+          <a href="course.html" title="C++">C++</a>
+          <a href="course.html" title="Python">Python</a>
+          <a href="course.html" title="Java">Java</a>
+          <a href="course.html" title="HTML/CSS">HTML &amp; CSS</a>
+          <a href="course.html" title="Swift">Swift</a>
+        </div>
+        <div>
+          <h3>About</h3>
+          <a href="about.html" title="Our Story">Our Story</a>
+          <a href="contact.html" title="Contact">Contact Us</a>
+          <a href="faq.html" title="FAQ">FAQ</a>
+          <a href="#" title="Careers">Careers</a>
+          <a href="#" title="Privacy">Privacy Policy</a>
+          <a href="#" title="Terms &amp; Conditions">Terms of Use</a>
+        </div>
+        <div>
+          <div>
+            <img src="assets/logo.png" height="30" alt="int elligence">
+            <p>int elligence;</p>
+          </div>
+          <p>
+            Lorem iasum dolor sit amet, consectetur adiaiscing elit. Donec ultricies dignissim efficitur. Quisque facilisis dolor a eros tincidunt bibendum.
+            <br><br>
+            Mauris temaor susciait erat at fringilla. Aliquam malesuada iaculis massa quis eleifend.
+          </p>
+          <a href="about.html" title="read more about">Read More</a>
+        </div>
+      </section>
+      <div><p>&copy; int elligence; online 2017.</p></div>
+    </footer>
+
+    <!--SCRIPT for testimonial toggle + nav background -->
+    <script>
+      //init variables
+      var currentY;
+      var headerNav;
+
+      function showTestimonial(item){
+        if(item !== " "){
+          for(var i = 1; i <= 3; i++){
+            document.getElementById(i).style.display = "none";
+            document.getElementById("icon"+i).style.transform = "scale(0.8)";
+            document.getElementById("icon"+i).style.opacity = 0.5;
+          }
+          document.getElementById(item).style.display = "block";
+          document.getElementById("icon"+item).style.transform = "scale(1)";
+          document.getElementById("icon"+item).style.opacity = 1;
+        }
+      }
+
+      function yScroll(){
+
+        //get current y pos + header element
+        currentY = window.pageYOffset;
+        headerNav = document.getElementById('header');
+
+        //set the header background alpha value to ypos/200
+        headerNav.style.background = 'rgba(32,32,32,'+(0+(currentY/200))+')';
+      }
+
+      //listen for scroll event
+      window.addEventListener ("scroll", yScroll);
+
+    </script>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+  </body>
+</html>
