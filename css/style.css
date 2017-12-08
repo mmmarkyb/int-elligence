@@ -65,13 +65,15 @@ section {
   border-radius: 8px;
   box-shadow: -5px 63px 71px -88px rgba(0,0,0,1);
 }
-
 .green:hover {
   background: #69B558;
 }
-
 .grey:hover {
   background: #3c3c3c;
+}
+.close {
+  margin: 16px;
+  font-size: 32px;
 }
 
 .header {
@@ -85,6 +87,19 @@ section {
 
   display: block;
   margin: 0;
+}
+
+.modal-dialog {
+  margin: 24px auto;
+  padding: 24px;
+}
+.modal-content {
+  width:100%;
+  padding: 12px;
+  border: none;
+}
+.modal-content h2 {
+  text-align: center;
 }
 
 .mission {
@@ -102,6 +117,7 @@ section {
 .member {
   width: 33%;
 }
+
 
 #headContainer {
   width: 720px;
@@ -248,9 +264,36 @@ section {
   color: white;
   background: #69B558;
 }
+#team .btn:hover{
+  background: #3c3c3c;
+}
+
 #login {
-  background: #69B558;
+  background: rgba(0,0,0,0.6); /*rgba(105, 181, 88, 0.85);*/
+}
+#login section{
+  width: 100%;
+}
+#login img{
+  width: 150px;
+  display: block;
   margin: auto;
+}
+#login p{
+  text-align: center;
+}
+#loginBtn {
+  background: #69B558;
+  border: #69B558;
+  color: white;
+  width: 100%;
+}
+#loginBtn:hover{
+  background: white;
+  color: #69B558;
+  border-style: solid;
+  border-width: 1px;
+  border-color:#69B558;
 }
 
 #team ul{
@@ -271,6 +314,7 @@ section {
    text-align: center;
 }
 
+<<<<<<< HEAD
 #courseHead {
   background: linear-gradient( rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75) ), url(../assets/course-bg.jpeg);
   background-size: cover;
@@ -388,6 +432,10 @@ section {
   background: black;
   margin: 9px;
 }
+=======
+
+
+>>>>>>> origin/master
 footer{
   background: #3c3c3c;
 }
