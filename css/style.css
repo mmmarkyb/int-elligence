@@ -1,3 +1,5 @@
+/*
+"*" - for all generic styles, used to reset browser defaults */
 * {
   box-sizing: border-box;
   font-family: -apple-system, BlinkMacSystemFont, 'HelveticaNeue', sans-serif;
@@ -25,6 +27,8 @@ p {
   font-size: 14px;
 }
 
+/* nav & header bar has fixed position to keep at attached to the top of the page
+   z-index property places it above the other elements*/
 header {
   width: 100%;
   position: fixed;
@@ -37,6 +41,7 @@ nav {
   height: 60px;
   margin: 0 auto;
 }
+/* child combinator selector for all nav a and ul elements */
 nav, nav > a, nav > ul {
   display: flex;
   align-items: center;
