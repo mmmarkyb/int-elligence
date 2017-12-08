@@ -65,6 +65,7 @@ section {
   margin: 64px auto;
 }
 
+/* btn styles for genreic button qualites  */
 
 .btn {
   display: block;
@@ -135,6 +136,7 @@ section {
   width: 33%;
 }
 
+/* all index styles  */
 
 #headContainer {
   width: 720px;
@@ -268,6 +270,7 @@ section {
   cursor: pointer;
 }
 
+/* all about styles  */
 
 #story iframe {
   display: block;
@@ -318,7 +321,6 @@ section {
   cursor: hover;
 }
 
-
 #team ul{
   display: flex;
   width: 100%;
@@ -336,6 +338,8 @@ section {
  #team li  > p {
    text-align: center;
 }
+
+/* all course styles  */
 
 #courseHead {
   background: linear-gradient( rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75) ), url(../assets/course-bg.jpeg);
@@ -459,6 +463,8 @@ section {
   margin: 9px;
 }
 
+/* all contact styles  */
+
 #contactIntro {
   margin-top: 80px;
   margin-bottom: 12px;
@@ -471,6 +477,7 @@ section {
   margin-bottom: 64px;
 }
 
+/* all course styles */
 
 #coursesIntro {
   margin-top: 80px;
