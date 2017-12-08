@@ -530,6 +530,9 @@ section {
   color: white;
   background: #3C3C3C;
 }
+#faq {
+  text-align: center;
+}
 
 footer{
   background: #3c3c3c;
