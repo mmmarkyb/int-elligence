@@ -1,7 +1,4 @@
 # int elligence;
-## About
-
-
 ## How to Deploy
 To set up our website, browse to where you would like to keep your code locally, then run the following in your terminal.
 
