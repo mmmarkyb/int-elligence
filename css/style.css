@@ -314,7 +314,6 @@ section {
    text-align: center;
 }
 
-<<<<<<< HEAD
 #courseHead {
   background: linear-gradient( rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75) ), url(../assets/course-bg.jpeg);
   background-size: cover;
@@ -432,10 +431,8 @@ section {
   background: black;
   margin: 9px;
 }
-=======
 
 
->>>>>>> origin/master
 footer{
   background: #3c3c3c;
 }
